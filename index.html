@@ -3,30 +3,31 @@
     <head>
         <meta charset="utf-8"> 
         <title>Talig Portafolio - Test HTML </title>
+        <script src="https://cdn.tailwindcss.com"></script>
         <link href="./assets/css/style.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
 <body class="bg-black text-white min-h-screen flex flex-col justify-between">
 <header> 
-        <h1> CV de Tomás Aliaga </h1>
-        <p> <strong> (Talig en Github)</strong> </p>
-    <nav class="bg-gray-800 text-blue-500">
-        <a href="#cv">Cv</a>
-        <a href="#portafolio">Portafolio</a>
-        <a href="#contacto">Contacto</a>
+        <h1 class="pl-4"> CV de Tomás Aliaga - <strong> (Talig en Github)</strong>  </h1>
+    <nav class="bg-gray-800 text-blue-500 flex gap-6 pl-4">
+        <a href="index.html">CV</a>
+        <a href="#portafolio">Portafolio</a> <!--Posiblemente sea otra pagina mas adelante.-->
+        <a href="#contacto">Contacto</a> <!--Id en footer para desplazar pagina hasta la info de contacto. # permite el movimiento por la misma hoja.-->
     </nav>
 </header>
 <main class="bg-white text-black aspect-square:1/4 flex-grow">
 <br>
-<p> Soy un estudiante de 21 años de la carrera Ingenieria en Informatica que tiene un conocimiento general de múltiples aristas en el área. <br>
+<section class="pl-4">
+<p class="border-2 border-black w-fit p-2"> Soy un estudiante de 21 años de la carrera Ingenieria en Informatica que tiene un conocimiento general de múltiples aristas en el área. <br>
     Destaco en mi compromiso, mi buen desempeño y mi proactividad. <br>
 
 2026 - Actualidad: Estudiante de 2do año.
 </p>
 <!-- <img src="" align="left" width="150"> -->
     <br>
-<h2> Portafolio </h2>
+<h2> <u> Portafolio </u> </h2>
 <h3> Proyectos desarrollados (En mis estudios) </h3>
     <br>
 <p> <strong> - CrossMatch - </strong> </p>
@@ -42,9 +43,11 @@
 <br>
 <h3> <strong> - Proyectos independientes - </strong> </h3>
 <p> He desarrollado de forma extracurricular juegos básicos en los lenguajes python y otros motores de GameDev, <br>
-    por lo que tengo un entendimiento técnico de juegos simples competente.
+    por lo que tengo un entendimiento técnico de juegos simples competente. </p>
+</section>
+<img src="https://images.vexels.com/media/users/3/157318/isolated/preview/2782b0b66efa5815b12c9c637322aff3-computadora-de-escritorio-icono-computadora.png" width="250"> <!--Link de imagen placeholder, sacada de un enlace online.-->
 </main>
-<footer>
+<footer id="contacto">
     <h2> Contacto </h2>
     <p> Correo Institucional: <a href="mailto:correo@duocuc.cl"> Correo@duocuc.cl </a> </p>
 </footer>
