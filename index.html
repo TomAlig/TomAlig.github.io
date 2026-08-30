@@ -3,33 +3,51 @@
     <head>
         <meta charset="utf-8"> 
         <title>Talig Portafolio - Test HTML </title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link href="./assets/css/style.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- <link href="./assets/css/style.css" rel="stylesheet"> Es para cuando el framework es local--> 
+        <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+        </script>
     </head>
 
 <body class="bg-black text-white min-h-screen flex flex-col justify-between">
 <header> 
-        <h1 class="pl-4"> CV de Tomás Aliaga - <strong> (Talig en Github)</strong>  </h1>
+        <h1 class="pl-4"> Prototipo CV de Tomás Aliaga - <strong> (Talig en Github)</strong>  </h1>
     <nav class="bg-gray-800 text-blue-500 flex gap-6 pl-4">
         <a href="index.html">CV</a>
-        <a href="#portafolio">Portafolio</a> <!--Posiblemente sea otra pagina mas adelante.-->
         <a href="#contacto">Contacto</a> <!--Id en footer para desplazar pagina hasta la info de contacto. # permite el movimiento por la misma hoja.-->
+        <button id="theme-toggle" type="button"> <!--El boton visible desde el inicio es el de la luna, inicia en lightmode-->
+        <span id="moon-icon">🌙</span>
+        <span id="sun-icon" class="hidden">☀️</span>
+        </button>
     </nav>
 </header>
-<main class="bg-white text-black aspect-square:1/4 flex-grow">
+<main class="bg-white text-black dark:bg-gray-900 dark:text-white saspect-square:1/4 flex-grow"> <!--Le dejo variantes para cuando efectivamente este activado el darkmode-->
 <br>
-<section class="pl-4">
-<p class="border-2 border-black w-fit p-2"> Soy un estudiante de 21 años de la carrera Ingenieria en Informatica que tiene un conocimiento general de múltiples aristas en el área. <br>
+<section class="pl-4"> <!--Corre los textos a la derecha.-->
+<p class="border-2 border-black w-fit p-2 dark:border-white"> Soy un estudiante de 21 años de la carrera Ingenieria en Informatica que tiene un conocimiento general de múltiples aristas en el área. <br>
     Destaco en mi compromiso, mi buen desempeño y mi proactividad. <br>
 
 2026 - Actualidad: Estudiante de 2do año.
 </p>
 <!-- <img src="" align="left" width="150"> -->
     <br>
-<h2> <u> Portafolio </u> </h2>
-<h3> Proyectos desarrollados (En mis estudios) </h3>
-    <br>
+<h2> <u> Expertiz en lenguajes </u> </h2>
+<div class="space-y-2 mb-8"> 
+<p> Dentro de mis áreas de conocimiento en programación están los siguientes lenguajes: </p> 
+
+<p> <strong>Python</strong>      - Intermedio </p>
+<p> <strong>SQL</strong>         - Intermedio </p>
+<p> <strong>Java</strong>        - Basico </p>
+<p> <strong>JavaScript</strong>  - Basico </p>
+</div>
+
+<div class="space-y-2 mb-8">
+<h3> <u>Proyectos desarrollados</u>  - (En mis estudios) </h3>
+
 <p> <strong> - CrossMatch - </strong> </p>
 <p> Fui uno de los desarrolladores en un proyecto evaluativo de diseño backend para un sistema de recomendación automatizado. <br>
     Dentro de mi desempeño se encuentra el manejo general de APIs simples en SpringBoot, La creación y mantenimiento de bases de datos <br>
@@ -38,19 +56,34 @@
 <br>
 <p> <strong> - Masterbikes - </strong> </p>
 <p> He realizado múltiples Mockups para páginas web, siendo el más predominante este trabajo semestral. <br>
-    El efectivo desarrollo de este proyecto me brindó habilidades para entender el flujo correcto y funcional del frontend, dándome un primer vistazo superficial en HTML.
+    El efectivo desarrollo de este proyecto me brindó habilidades para entender el flujo correcto y funcional del frontend, dándome un primer vistazo superficial en la estructura HTML.
 </p>
 <br>
 <h3> <strong> - Proyectos independientes - </strong> </h3>
 <p> He desarrollado de forma extracurricular juegos básicos en los lenguajes python y otros motores de GameDev, <br>
     por lo que tengo un entendimiento técnico de juegos simples competente. </p>
+</div>
+<div class="space-y-2 mb-8">
+<h2> <u> Certificaciones</u> </h2>
+<!-- <img src="" width="250" align="right"> Link de imagen placeholder, por si implemento una luego.-->
+<p>Actualmente cuento con 2 certificaciones aprobadas:</p>
+<p> <strong> Cybersecurity Foundation (CSFPC) </strong> </p>
+<p> Adquirida en Octubre de 2025 - Certiprof </p>
+<br>
+<p> <strong> Python Essentials 1 </strong> </p>
+<p> Adquirida en Julio de 2025 - Cisco </p>
+</div>
 </section>
-<img src="https://images.vexels.com/media/users/3/157318/isolated/preview/2782b0b66efa5815b12c9c637322aff3-computadora-de-escritorio-icono-computadora.png" width="250"> <!--Link de imagen placeholder, sacada de un enlace online.-->
 </main>
-<footer id="contacto">
-    <h2> Contacto </h2>
-    <p> Correo Institucional: <a href="mailto:correo@duocuc.cl"> Correo@duocuc.cl </a> </p>
-</footer>
+<footer id="contacto" class="mb-8 mt-8 pl-4">
+    
+    <h2> <u> Contacto </u> </h2>
+    <p> Correo Institucional: <a href="mailto:Ejemplo@duocuc.cl"> Ejemplo@duocuc.cl </a> </p>
+    <p> Github: <u> <a href="https://github.com/TomAlig" class="text-blue-500"> TomAlig </a> </u> </p>
 
+    <p> Para mensajes directos atraves de este portal, ingrese <u> <a href="mensaje.html" class="text-blue-500"> aqui </a> </u>. </p>
+    
+</footer>
+<script src="config.js"></script> <!--Llama al script de JS para el darkmode-->
 </body>
 </html>
