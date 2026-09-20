@@ -8,6 +8,9 @@ export default defineConfig({
     react(),
     tailwindcss(), 
   ],
-  base: '/TomAlig.github.io/'
+  base: '/TomAlig.github.io/',
+  build: {
+    outDir: 'docs',
+  }
 
 })
