@@ -1,27 +1,17 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="utf-8"> 
-        <title>Mensaje Directo - Test HTML </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <!-- <link href="./assets/css/style.css" rel="stylesheet"> -->
-        <script>
-        tailwind.config = {
-            darkMode: 'class'
-        }
-        </script>
-        <link rel="stylesheet" href="assets/css/stylemedia.css"> 
-    </head>
+import { useState } from 'react'
 
-<body class="bg-black text-white min-h-screen flex flex-col justify-between">
+export default function Mensaje({ alVolver }) { //Se exporta la funcion para que App la reconozca.
+    //Clickear Volver devuelve a "inicio", como se definio en el if de "App"
+  return (
+       <div class="bg-black text-white min-h-screen flex flex-col justify-between">
 <header> 
-        <h1 class="pl-4"> Prototipo / Prueba de CV de Tomás Aliaga - <strong> (Talig en Github)</strong>  </h1>
+        <h1 class="pl-4"> Prototipo CV de Tomás Aliaga - <strong> (Talig en Github)</strong>  </h1>
     <nav class="bg-gray-800 text-blue-500 flex gap-6 pl-4">
-        <a href="index.html">Volver</a> 
+        <button onClick={alVolver} className="text-blue-500 cursor-pointer"> Volver </button> 
+
     </nav>
 </header>
-<main class="bg-gray-900 text-white aspect-square:1/4 flex flex-grow items-center justify-center"> <!--No olvidar, flex es absolutamente necesario para el funcionamiento de clases relacionadas.-->
+<main class="bg-gray-900 text-white aspect-square:1/4 flex flex-grow items-center justify-center"> 
 <section class="pl-4">
 <form id="formulario-contacto" class="w-full max-w-md space-y-4">
 
@@ -32,7 +22,7 @@
     id="correo"
     name="Correo"
     class="w-full p-2 rounded border border-gray-600 bg-gray-800"
-    >
+    ></input>
     </div>
 
     <label for="mensaje" class="block mb-2">Mensaje:</label>
@@ -52,5 +42,6 @@
     <p> Correo Institucional: <a href="mailto:Ejemplo@duocuc.cl"> Ejemplo@duocuc.cl </a> </p>
     <p> Github: <u> <a href="https://github.com/TomAlig" class="text-blue-500"> TomAlig </a> </u> </p>
 </footer>
-</body>
-</html>
+</div>
+        )
+}

@@ -1,1 +1,1 @@
-Test html Tailwind.
+Test html Tailwind + React.
