@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     tailwindcss(), 
   ],
-  base: './',
+  base: './', /*Desde el lugar actual, busca los assets*/
   build: {
     outDir: 'docs',
   }
