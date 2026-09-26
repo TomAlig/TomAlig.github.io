@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import Mensaje from './Mensaje' // Para moverse al html de mensaje
-import Header from './Header'
-import Intro from './Intro'
-import Lenguajes from './Lenguajes'
-import Proyectos_Certificaciones from './Proyectos_Certificaciones'
-import Footer from './Footer'
+import Header from '../components/layout/Header'
+import Intro from '../Intro'
+import Lenguajes from '../components/layout/Lenguajes'
+import Proyectos_Certificaciones from '../components/layout/Proyectos_Certificaciones'
+import Footer from '../components/layout/Footer'
 function App() {
   const [pagina, setPagina] = useState('inicio') //Define esta pagina como el inicio
   const [esOscuro, setEsOscuro] = useState(true) //Empieza en oscuro para el boton, pero es toggleable con el mismo.
