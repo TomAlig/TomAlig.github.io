@@ -1,12 +1,12 @@
+
 import { useState, useEffect } from 'react'
-import Mensaje from './Mensaje' // Para moverse al html de mensaje
+ // Para moverse al html de mensaje estaba el importe, ahora se utiliza Link del router atraves de Footer.
 import Header from '../components/layout/Header'
 import Intro from '../Intro'
 import Lenguajes from '../components/layout/Lenguajes'
 import Proyectos_Certificaciones from '../components/layout/Proyectos_Certificaciones'
 import Footer from '../components/layout/Footer'
 function App() {
-  const [pagina, setPagina] = useState('inicio') //Define esta pagina como el inicio
   const [esOscuro, setEsOscuro] = useState(true) //Empieza en oscuro para el boton, pero es toggleable con el mismo.
 
   //Empieza visualmente la pagina en dark, es decir, con esos estilos.
@@ -19,10 +19,7 @@ function App() {
     document.documentElement.classList.toggle("dark")
     setEsOscuro(!esOscuro) 
   }
-  if (pagina === 'mensaje') {
-    return <Mensaje alVolver={() => setPagina('inicio')} />
-  }
-  //Header, Intro, Lenguajes, Proyectos_Certificaciones y Footer son .JSX para el seccionamiento de la pagina.
+
   //Header utiliza como argumento variables definidas App por lo que hay que definir exactamente a que apuntar en su invocacion.
   return (
     <div className="bg-black text-white min-h-screen flex flex-col justify-between">
@@ -35,7 +32,7 @@ function App() {
             <Proyectos_Certificaciones/>
           </section>
       </main>
-      <Footer setPagina={setPagina}/>
+      <Footer />
     </div>
         )
 }
